@@ -1,0 +1,48 @@
+:root {
+  /* colors */
+  --color-canvas: #f3f4f6;
+  --color-canvas-darker: #e2e8f0;
+  --color-canvas-lighter: #ffffff;
+
+  --color-text-co: #030712;
+
+  --color-primary: #e17100;
+  --color-primary-lighter: #fd9a00;
+  --color-primary-darker: #bb4d00;
+
+  /* spacing */
+  --default-padding: 1rem;
+
+  /* style */
+  --default-border-radius: 10px;
+  --default-box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+
+  /* transition */
+}
+
+#root {
+  color: var(--color-text-co);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100lvh;
+
+  background-color: var(--color-canvas);
+}
+svg {
+  --size: 1em;
+  height: var(--size);
+  width: var(--size);
+
+  fill: var(--color-text-co);
+}
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}

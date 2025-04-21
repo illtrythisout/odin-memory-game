@@ -6,9 +6,6 @@
 
   padding: var(--default-padding);
 
-  width: 800px;
-  height: 400px;
-
   border-radius: var(--default-border-radius);
   background-color: var(--color-canvas-lighter);
   box-shadow: var(--default-box-shadow);

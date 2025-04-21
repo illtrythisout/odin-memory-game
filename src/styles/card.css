@@ -1,5 +1,15 @@
 .card {
+  --size: 200px;
+  width: var(--size);
+  height: var(--size);
+
   border-radius: var(--default-border-radius);
-  border: 2.5px solid var(--color-primary);
+  border: 5px solid var(--color-primary);
   box-shadow: var(--default-box-shadow);
+
+  overflow: hidden;
+}
+.card > img {
+  width: 100%;
+  height: 100%;
 }

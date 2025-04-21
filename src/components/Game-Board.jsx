@@ -1,7 +1,14 @@
 import '../styles/game-board.css';
 import Card from './Card';
 
-function GameBoard({ characters, selectCard }) {
+function GameBoard({ characters, selectCard, loadingStatus }) {
+  if (loadingStatus !== 'loaded') {
+    return (
+      <div className="container-div">
+        <p>{loadingStatus}</p>
+      </div>
+    );
+  }
   return (
     <div className="game-board container-div">
       {characters.map((character) => {

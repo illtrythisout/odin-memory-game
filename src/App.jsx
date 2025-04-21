@@ -7,6 +7,9 @@ function App() {
   // Get Images
   const [characters, setCharacters] = useState([]);
 
+  // Api fetching
+  const [loadingStatus, setLoadingStatus] = useState('Loading...');
+
   useEffect(() => {
     // choose which characters get chosen
     const characterNames = [
@@ -47,8 +50,12 @@ function App() {
           }));
 
         setCharacters(shuffleCards(filteredCharacters));
+        setLoadingStatus('loaded');
       } catch (error) {
         console.error('Error fetching data:', error);
+        setLoadingStatus(
+          'There was an error fetching data, check console for info'
+        );
       }
     }
 
@@ -100,7 +107,11 @@ function App() {
           score={selectedCards.length}
           highScore={highScore}
         ></ScoreBoard>
-        <GameBoard characters={characters} selectCard={selectCard} />
+        <GameBoard
+          characters={characters}
+          selectCard={selectCard}
+          loadingStatus={loadingStatus}
+        />
       </main>
     </>
   );

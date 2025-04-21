@@ -4,10 +4,17 @@
   height: var(--size);
 
   border-radius: var(--default-border-radius);
-  border: 5px solid var(--color-primary);
   box-shadow: var(--default-box-shadow);
 
   overflow: hidden;
+
+  transition: transform 100ms ease-out;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card:active {
+  transform: scale(1);
 }
 .card > img {
   width: 100%;

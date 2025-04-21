@@ -1,6 +1,7 @@
 import './styles/base.css';
 import { useState, useEffect } from 'react';
 import GameBoard from './components/Game-Board';
+import ScoreBoard from './components/Score-Board';
 
 function App() {
   // Get Images
@@ -50,15 +51,20 @@ function App() {
     fetchAllCharacters();
   }, []);
 
-  // Remember selected images
+  // Remember selected images & keep score
   const [selectedCards, setSelectedCards] = useState([]);
+  const [highScore, setHighScore] = useState(0);
   function selectCard(character) {
     const key = character.id;
     if (selectedCards.includes(key)) {
+      setSelectedCards([]);
       console.log('game over');
     } else {
       setSelectedCards([...selectedCards, key]);
       setCharacters(shuffleCards(characters));
+
+      // set high score
+      if (selectedCards.length >= highScore) setHighScore((n) => n + 1);
     }
   }
 
@@ -86,6 +92,10 @@ function App() {
   return (
     <>
       <main>
+        <ScoreBoard
+          score={selectedCards.length}
+          highScore={highScore}
+        ></ScoreBoard>
         <GameBoard characters={characters} selectCard={selectCard} />
       </main>
     </>

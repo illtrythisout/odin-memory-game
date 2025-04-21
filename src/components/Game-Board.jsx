@@ -3,7 +3,7 @@ import Card from './Card';
 
 function GameBoard({ characters, selectCard }) {
   return (
-    <div className="game-board">
+    <div className="game-board container-div">
       {characters.map((character) => {
         return (
           <Card

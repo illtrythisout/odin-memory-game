@@ -30,10 +30,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: var(--default-padding);
 
   height: 100lvh;
 
   background-color: var(--color-canvas);
+}
+b {
+  font-weight: bold;
 }
 svg {
   --size: 1em;
@@ -47,4 +51,12 @@ button {
   border: none;
 
   cursor: pointer;
+}
+
+.container-div {
+  padding: var(--default-padding);
+
+  border-radius: var(--default-border-radius);
+  background-color: var(--color-canvas-lighter);
+  box-shadow: var(--default-box-shadow);
 }

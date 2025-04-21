@@ -3,10 +3,4 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: var(--default-padding);
-
-  padding: var(--default-padding);
-
-  border-radius: var(--default-border-radius);
-  background-color: var(--color-canvas-lighter);
-  box-shadow: var(--default-box-shadow);
 }

@@ -1,12 +1,12 @@
 import '../styles/game-board.css';
-import '../styles/card.css';
+import Card from './Card';
 
-function GameBoard() {
+function GameBoard({ images, selectCard }) {
   return (
     <div className="game-board">
-      {/* {images.map((image) => {
-        return <Card />;
-      })} */}
+      {images.map((img) => {
+        return <Card img={img} selectCard={() => selectCard(img)} key={img} />;
+      })}
     </div>
   );
 }

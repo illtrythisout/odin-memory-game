@@ -7,6 +7,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
+    // choose which characters get chosen
     const characterNames = [
       'President Curtis',
       'Mr. Meeseeks',
@@ -18,6 +19,7 @@ function App() {
       'Squanchy',
     ];
 
+    // fetch character images
     async function fetchAllCharacters() {
       let allCharacters = [];
       let nextUrl = 'https://rickandmortyapi.com/api/character';
@@ -39,7 +41,7 @@ function App() {
             image: character.image,
           }));
 
-        setCharacters(filteredCharacters);
+        setCharacters(shuffleCards(filteredCharacters));
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -59,7 +61,6 @@ function App() {
       setCharacters(shuffleCards(characters));
     }
   }
-  console.log('Selected Cards', selectedCards);
 
   // shuffle cards
   function shuffleCards(arrayToShuffle) {

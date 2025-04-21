@@ -18,6 +18,10 @@ function App() {
       'Cornvelious Daniel',
       'Dr. Xenon Bloom',
       'Squanchy',
+      'Scary Terry',
+      'Armagheadon',
+      'Gazorpazorpfield',
+      'Unity',
     ];
 
     // fetch character images

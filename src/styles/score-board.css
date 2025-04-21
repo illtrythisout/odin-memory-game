@@ -2,5 +2,5 @@
   display: flex;
   justify-content: space-evenly;
 
-  width: calc(4 * 200px + 5 * var(--default-padding));
+  width: calc(4 * 180px + 5 * var(--default-padding));
 }
